@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1800.0" style="-fx-background-color: #1E243D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin_sql_tp2.MyController">
+   <children>
+      <Button fx:id="myConnexionButton" layoutX="405.0" layoutY="25.0" mnemonicParsing="false" onAction="#connexionPressEvent" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" text="Connexion">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Button fx:id="myQueryButton" layoutX="405.0" layoutY="90.0" mnemonicParsing="false" onAction="#executionPressEvent" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" text="Execution">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label fx:id="myResultLabel" alignment="TOP_LEFT" layoutX="1070.0" layoutY="58.0" prefHeight="703.0" prefWidth="691.0" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" text="Résultat">
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets></Label>
+      <Label fx:id="myConnexionLabel" layoutX="511.0" layoutY="29.0" style="-fx-text-fill: #7289EE;" text="Pas connecté" />
+      <TextField fx:id="myIdentityTextField" layoutX="19.0" layoutY="25.0" prefHeight="25.0" prefWidth="177.0" promptText="Identité" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <TextField fx:id="myPasswordTextField" layoutX="218.0" layoutY="25.0" prefHeight="25.0" prefWidth="162.0" promptText="Mot de passe" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <TextField fx:id="myQueryTextField" layoutX="19.0" layoutY="90.0" prefHeight="25.0" prefWidth="360.0" promptText="Requête SELECT" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <Label layoutX="43.0" layoutY="157.0" style="-fx-text-fill: #7289EE;" text="• Afficher les tables ">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="179.0" layoutY="338.0" mnemonicParsing="false" onAction="#searchEtuButton" prefHeight="25.0" prefWidth="141.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Rechercher l'étudiant" />
+      <Button layoutX="137.0" layoutY="203.0" mnemonicParsing="false" onAction="#EnseignantPressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Enseignant" />
+      <Button layoutX="240.0" layoutY="203.0" mnemonicParsing="false" onAction="#AttestationPressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Attestation" />
+      <Button layoutX="353.0" layoutY="203.0" mnemonicParsing="false" onAction="#EntreprisePressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Entreprise" />
+      <Button layoutX="35.0" layoutY="252.0" mnemonicParsing="false" onAction="#StagePressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Stage" />
+      <Button layoutX="137.0" layoutY="252.0" mnemonicParsing="false" onAction="#SuperviseurPressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Superviseur" />
+      <Button layoutX="240.0" layoutY="252.0" mnemonicParsing="false" onAction="#NotePressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Note" />
+      <Button layoutX="353.0" layoutY="252.0" mnemonicParsing="false" onAction="#FormulairePressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Formulaire" />
+      <Label layoutX="35.0" layoutY="301.0" prefHeight="30.0" prefWidth="150.0" style="-fx-text-fill: #7289EE;" text="• Rechercher">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomEtuTextField" layoutX="29.0" layoutY="338.0" prefHeight="25.0" prefWidth="127.0" promptText="Nom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="prenomEtuTextField" layoutX="29.0" layoutY="382.0" prefHeight="25.0" prefWidth="127.0" promptText="Prénom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Button layoutX="35.0" layoutY="203.0" mnemonicParsing="false" onAction="#EtudiantPressEvent" prefWidth="80.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Etudiant" />
+      <Button layoutX="339.0" layoutY="338.0" mnemonicParsing="false" onAction="#searchNoteButton" prefHeight="25.0" prefWidth="141.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Voir les notes" />
+      <Separator layoutX="25.0" layoutY="421.0" prefHeight="6.0" prefWidth="457.0" />
+      <TextField layoutX="29.0" layoutY="441.0" prefHeight="25.0" prefWidth="169.0" promptText="Nom de l'enseignant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField layoutX="29.0" layoutY="485.0" prefHeight="25.0" prefWidth="169.0" promptText="Prénom de l'enseignant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Button layoutX="280.0" layoutY="441.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="188.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Rechercher l'enseignant" />
+      <Separator layoutX="21.0" layoutY="526.0" prefHeight="6.0" prefWidth="457.0" />
+      <TextField layoutX="26.0" layoutY="666.0" promptText="Nom de l&quot;entreprise" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <Button layoutX="280.0" layoutY="666.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Rechercher l'entreprise" />
+      <TextField layoutX="26.0" layoutY="556.0" prefHeight="25.0" prefWidth="169.0" promptText="Nom du superviseur" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField layoutX="26.0" layoutY="599.0" prefHeight="25.0" prefWidth="169.0" promptText="Prénom du superviseur" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Button layoutX="279.0" layoutY="556.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="188.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Rechercher le superviseur" />
+      <Separator layoutX="21.0" layoutY="639.0" prefHeight="6.0" prefWidth="457.0" />
+      <Separator layoutX="21.0" layoutY="713.0" prefHeight="6.0" prefWidth="457.0" />
+      <Button layoutX="258.0" layoutY="375.0" mnemonicParsing="false" onAction="#searchFormulaireButton" prefHeight="25.0" prefWidth="162.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Rechercher les formulaires" />
+      <Separator layoutX="505.0" layoutY="138.0" orientation="VERTICAL" prefHeight="611.0" prefWidth="0.0" />
+      <Label layoutX="532.0" layoutY="157.0" style="-fx-text-fill: #7289EE;" text="• Insertion">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="546.0" layoutY="188.0" style="-fx-text-fill: #7289EE;" text="• Etudiant">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomInsertEtuTextField" layoutX="532.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" promptText="Nom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="prenomInsertEtuTextField" layoutX="680.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" promptText="Prénom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="adrEtuTextField" layoutX="827.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" promptText="Adresse de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="mailEtuTextField" layoutX="608.0" layoutY="265.0" prefHeight="25.0" prefWidth="127.0" promptText="Mail de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="numEtuTextField" layoutX="764.0" layoutY="265.0" prefHeight="25.0" prefWidth="127.0" promptText="Numéro de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Button layoutX="532.0" layoutY="304.0" mnemonicParsing="false" onAction="#InsertEtuButton" prefHeight="25.0" prefWidth="424.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Insérer l'étudiant" />
+      <Separator layoutX="988.0" layoutY="136.0" orientation="VERTICAL" prefHeight="611.0" prefWidth="0.0" />
+      <Label layoutX="532.0" layoutY="356.0" style="-fx-text-fill: #7289EE;" text="• Modification">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="546.0" layoutY="387.0" style="-fx-text-fill: #7289EE;" text="• Etudiant">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modifyTextField" layoutX="547.0" layoutY="466.0" prefHeight="25.0" prefWidth="169.0" promptText="Colone a modifier" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <TextField fx:id="newValueTextField" layoutX="749.0" layoutY="466.0" prefHeight="25.0" prefWidth="177.0" promptText="Nouvelle Valeur" style="-fx-background-color: #333C64; -fx-text-fill: #7289EE;" />
+      <Button layoutX="550.0" layoutY="503.0" mnemonicParsing="false" onAction="#modifyButton" prefHeight="25.0" prefWidth="378.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Modifier la valeur de l'étudiant" />
+      <TextField fx:id="nomUpdateEtuTextField" layoutX="547.0" layoutY="421.0" prefHeight="25.0" prefWidth="169.0" promptText="Nom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField fx:id="prenomUpdateEtuTextField" layoutX="746.0" layoutY="421.0" prefHeight="25.0" prefWidth="177.0" promptText="Prénom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Label layoutX="529.0" layoutY="555.0" style="-fx-text-fill: #7289EE;" text="• Supression">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="586.0" style="-fx-text-fill: #7289EE;" text="• Attestation">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="544.0" layoutY="618.0" prefHeight="25.0" prefWidth="169.0" promptText="Nom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <TextField layoutX="749.0" layoutY="618.0" prefHeight="25.0" prefWidth="177.0" promptText="Prénom de l'étudiant" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" />
+      <Button layoutX="543.0" layoutY="666.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="384.0" style="-fx-text-fill: #7289EE; -fx-background-color: #333C64;" text="Supprimer l'étudiant" />
+   </children>
+</Pane>
